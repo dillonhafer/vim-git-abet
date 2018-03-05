@@ -33,7 +33,7 @@ function! s:GitAbetInstall()
     let uri = "https://github.com/dillonhafer/git-abet/releases/download/0.0.1/git-abet-linux"
   endif
 
-  execute "!curl -s -fL '".l:uri."' > /usr/local/bin/git-abed"
+  execute "!curl -s -fL '".l:uri."' > /usr/local/bin/git-abet && chmod +x /usr/local/bin/git-abet"
 endfunction
 
 command! -nargs=* GitAbet call s:GitAbetCommand(expand("%p"), "5")
